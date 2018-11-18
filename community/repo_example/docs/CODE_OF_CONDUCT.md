@@ -2,7 +2,7 @@
 
 ## Continuous Engineering Project community guidelines
 
-We want to keep the ceProject community awesome, growing and collaborative. We need your help to keep it that way. To help with this we've come up with some general guidelines for the community as a whole:
+We want to keep the Continuous Engineering Project community awesome, growing and collaborative. We need your help to keep it that way. To help with this we've come up with some general guidelines for the community as a whole:
 
 ## Our Pledge
 
