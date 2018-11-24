@@ -1,6 +1,7 @@
-# Contribute to ceOminus
+<!--TODO: Update project name-->
+# Contribute to Continuous Engineering Experiment
 
-Want to hack on the Continuous Engineering Platform? Awesome! This page contains information about reporting issues as well as some tips and guidelines useful to experienced open source contributors.
+Want to hack on the <!--TODO: Update project name--> Continuous Engineering Experiment? Awesome! This page contains information about reporting issues as well as some tips and guidelines useful to experienced open source contributors.
 
 ## Reporting issues
 
@@ -8,13 +9,12 @@ A great way to contribute to the project is to send a detailed report when you e
 
 Check that [our issue database][RaiseIssue] doesn't already include that problem or suggestion before submitting an issue. If you find a match, you can use the "subscribe" button to get notified on updates. Do *not* leave random "+1" or "I have this too" comments, as they only clutter the discussion, and don't help in resolving it. However, if you have ways to reproduce the issue or have additional information that may help in resolving the issue, please leave a comment.
 
-## Quick contribution tips and guidelines
 
-This section gives the experienced contributor some tips and guidelines.
+## Quick contribution tips and guidelines
 
 ### Pull requests are always welcome
 
-Not sure if that typo is worth a pull request? Found a bug and know how to fix it? Do it! We will appreciate it. Any significant improvement should be documented as [a GitHub issue][RaiseIssue] before anybody starts working on it.
+Not sure if that typo is worth a pull request? Found a bug and know how to fix it? Do it! We will appreciate it. Any significant improvement should be documented as [an issue][RaiseIssue] before anybody starts working on it.
 
 We are always thrilled to receive pull requests. We do our best to process them quickly. If your pull request is not accepted on the first try, don't get discouraged!
 
@@ -23,34 +23,24 @@ We are always thrilled to receive pull requests. We do our best to process them 
 You can propose new designs for existing features. You can also design entirely new features. We really appreciate contributors who want to refactor or otherwise cleanup our project.
 
 
-### Connect with other Continuous Engineering Platform contributors
+### Connect with other <!--TODO: Update project name--> Continuous Engineering Experiment contributors
 
 <table class="tg">
   <col width="45%">
   <col width="65%">
-  <!--
-  <tr>
-    <td>Forums</td>
-    <td>
-      A public forum for users to discuss questions and explore current design patterns and best practices about all the Continuous Engineering Project. To participate, log in with your Github account or create an account at <a href="https://forums.mobyproject.org" target="_blank">https://forums.mobyproject.org</a>.
-    </td>
-  </tr>
-  -->
   <tr>
     <td>Slack</td>
     <td>
       <p>
         Register for the Continuous Engineering Project Community Slack at
-	<a href="https://community.docker.com/registrations/groups/4316" target="_blank">https://community.docker.com/registrations/groups/4316</a>.
-        We use the #moby-project channel for general discussion, and there are seperate channels for other Moby projects such as #containerd.
-	Archives are available at <a href="https://dockercommunity.slackarchive.io/" target="_blank">https://dockercommunity.slackarchive.io/</a>.
+	<a href="https://continuousengproject.slack.com">https://continuousengproject.slack.com</a>. We can be found on channel <!--TODO: Update Slack channel-->#ceExample for general discussion.
       </p>
     </td>
   </tr>
   <tr>
     <td>Twitter</td>
     <td>
-      You can follow <a href="https://twitter.com/moby/" target="_blank">Moby Project Twitter feed</a> to get updates on our products. You can also tweet us questions or just share blogs or stories.
+      You can follow <a href="https://twitter.com/ceProject/" target="_blank">Continuous Engineering Project Twitter feed</a> to get updates on our projects. You can also tweet us questions or just share blogs or stories.
     </td>
   </tr>
 </table>
@@ -59,8 +49,8 @@ You can propose new designs for existing features. You can also design entirely 
 
 Fork the repository and make changes on your fork in a feature branch:
 
-- If it's a bug fix branch, name it XXXX-bug where XXXX is the number of the issue. 
-- If it's a feature branch, create an enhancement issue to announce your intentions, and name it XXXX-feature where XXXX is the number of the issue.
+- If it's a bug fix branch, name it bug-XXXX where XXXX is the number of the issue.
+- If it's a feature branch, create an enhancement issue to announce your intentions, and name it feature-XXXX where XXXX is the number of the issue.
 
 Submit tests for your changes. See [TESTING.md][Testing] for details.
 
@@ -116,9 +106,9 @@ Please see the [Coding Style](#coding-style) for further guidelines.
 
 ### Merge approval
 
-Continuous Engineering Platform maintainers use LGTM (Looks Good To Me) in comments on the code review to indicate acceptance, or use the Github review approval feature.
+Project maintainers use LGTM (Looks Good To Me) in comments on the code review to indicate acceptance, or use the Github review approval feature.
 
-For an explanation of the review and approval process see the [REVIEWING](docs/REVIEWING.md) page.
+For an explanation of the review and approval process see the [REVIEWING][Review] page.
 
 ### Sign your work
 
@@ -167,8 +157,6 @@ Then you just add a line to every git commit message:
 
     Signed-off-by: Joe Smith <joe.smith@email.com>
 
-Use your real name (sorry, no pseudonyms or anonymous contributions.)
-
 If you set your `user.name` and `user.email` git configs, you can sign your commit automatically with `git commit -s`.
 
 ## Coding Style
@@ -176,6 +164,7 @@ If you set your `user.name` and `user.email` git configs, you can sign your comm
 Unless explicitly stated, we follow all coding guidelines from the Go community. While some of these standards may seem arbitrary, they somehow seem to result in a solid, consistent codebase.
 
 It is possible that the code base does not currently comply with these guidelines. We are not looking for a massive PR that fixes this, since that goes against the spirit of the guidelines. All new contributions should make a best effort to clean up and make the code base better than they left it. Obviously, apply your best judgement. Remember, the goal here is to make the code base easier for humans to navigate and understand. Always keep that in mind when nudging others to comply.
+
 
 The rules:
 
@@ -197,5 +186,7 @@ If you are having trouble getting into the mood of idiomatic Go, we recommend re
 [GoLint]: https://github.com/golang/lint
 [GoBlog]: https://blog.golang.org
 [Testing]: TESTING.md
+[Review]: docs/REVIEWING.md
+<!--TODO: Update RaiseIssue URL-->
 [RaiseIssue]: https://github.com/ContinuousEngineeringProject/ContinuousEngineeringPlatform/issues
 [GitCommit]: http://chris.beams.io/posts/git-commit/
