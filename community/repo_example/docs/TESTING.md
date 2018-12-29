@@ -1,14 +1,13 @@
 # Testing
 
-This document contains the Continuous Engineering Platform code testing guidelines. It should answer any questions you may have as an aspiring contributor. 
+This document contains the <!--TODO: Update Project Name-->Continuous Engineering Example code testing guidelines. It should answer any questions you may have as an aspiring contributor.
 
-Contributing includes testing your changes. If you change the cePlatform code, you may need to add a new test or modify an existing test. Your contribution could even be adding tests to cePlatform. For this reason, you need to know a little about cePlatform's test infrastructure.
+Contributing includes testing your changes. If you change the codebase, you may need to add a new test or modify an existing test. Your contribution could even be adding tests to the existing codebase. For this reason, you need to know a little about the test infrastructure.
 
-## Understand how to test cePlatform
+## Understand how to test
+The project's tests use the Go language's test framework. In this framework, files whose names end in `_test.go` contain test code; you'll find test files like this throughout the repo. Use these files for inspiration when writing your own tests. For information on Go's test framework, see [Go's testing package documentation][Testing] and the [go test help][GoTestHelp].
 
-cePlatform tests use the Go language's test framework. In this framework, files whose names end in `_test.go` contain test code; you'll find test files like this throughout the cePlatform repo. Use these files for inspiration when writing your own tests. For information on Go's test framework, see [Go's testing package documentation][Testing] and the [go test help][GoTestHelp].
-
-You are responsible for _unit testing_ your contribution when you add new or change existing cePlatform code. A unit test is a piece of code that invokes a single, small piece of code (_unit of work_) to verify the unit works as expected.
+You are responsible for _unit testing_ your contribution when you add new or change existing project code. A unit test is a piece of code that invokes a single, small piece of code (_unit of work_) to verify the unit works as expected.
 
 Depending on your contribution, you may need to add _integration tests_. These are tests that combine two or more work units into one component. These work units each have unit tests and then, together, integration tests that test the interface between the components. 
 
@@ -16,9 +15,10 @@ Testing is its own specialty. If you aren't familiar with testing techniques, th
 
 ## Test suites
 
-The Continuous Engineering Platform has two test suites:
+The project has two test suites:
 
 * Unit tests - use standard `go test` and [testify][Testify] assertions. They are located in the package they test. Unit tests should be fast and test only their own  package.
+<!-- ToDo: Verify integration tests -->
 * Integration tests - use standard `go test` and [testify][Testify] assertions. They are located in `./integration/<component>` directories.
 
 ## Writing new tests
@@ -47,11 +47,11 @@ A bug fix may also include new assertions in an existing integration test.
 
 ## Running tests
 
-Before submitting a pull request with a code change, you should run the entire cePlatform  test suite. The `Makefile` contains a target for the entire test suite, named `test`. Also, it contains several targets for testing:
+Before submitting a pull request with a code change, you should run the entire project test suite. The `Makefile` contains a target for the entire test suite, named `test`. Also, it contains several targets for testing:
 
 | Target                 | What this target does                          |
 | ---------------------- | ---------------------------------------------- |
-| `test`                 | Run the unit, integration, and docker-py tests |
+| `test`                 | Run the unit, integration, and docker tests    |
 | `test-unit`            | Run just the unit tests                        |
 | `test-integration`     | Run the integration tests for the CLI          |
 
@@ -72,7 +72,7 @@ Running the entire test suite on your current repository can take over half an h
 ```
 make test
 ```
-<!--
+
 ## Run unit tests
 
 We use golang standard [testing][Testing] package for our unit tests.
@@ -102,11 +102,11 @@ We use golang standard [testing][Testing] package for our integration tests. You
 ```bash
 $ TESTFLAGS='-check.f DockerSuite.TestBuild*' make test-integration
 ```
--->
+
 
 ## Where to go next
 
-Congratulations, you have successfully completed the basics you need to understand the cePlatform test framework.
+Congratulations, you have successfully completed the basics you need to understand the projects test framework.
 
 [Testify]: https://github.com/stretchr/testify
 [Testing]: https://golang.org/pkg/testing/
