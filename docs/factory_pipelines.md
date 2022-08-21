@@ -1,0 +1,1 @@
+# Factory Pipeline Patterns
