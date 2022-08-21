@@ -9,7 +9,7 @@
 ## Build the factory
 <!-- TODO: Goal Desc - Build the Factory -->
 
---- mermaid
+---mermaid
 flowchart LR
     id1(Journey Constraints) --- id2(Create factory infrastructure)
     id2 --- id3(Deploy factory core)
@@ -19,7 +19,7 @@ flowchart LR
 ## Maintain the factory
 <!-- TODO: Goal Desc - Maintain the factory -->
 
---- mermaid
+---mermaid
 flowchart LR
     id1(Journey Constraints) --- id2()
 ---
@@ -27,7 +27,7 @@ flowchart LR
 ## On-demand factory management
 <!-- TODO: Goal Desc - On-demand factory management -->
 
---- mermaid
+---mermaid
 flowchart LR
     id1(Journey Constraints) --- id2()
 ---
