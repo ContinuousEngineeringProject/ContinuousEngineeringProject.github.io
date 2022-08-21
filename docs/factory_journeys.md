@@ -11,8 +11,8 @@
 
 ```mermaid
 flowchart LR
-    id1(Journey Constraints) --- id2(Create factory infrastructure)
-    id2 --- id3(Deploy factory core)
+    id1(Journey Constraints) 
+    id2(Create factory infrastructure) --- id3(Deploy factory core)
     id3 --- id4(Configure factory components)
 ```
 
@@ -21,7 +21,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    id1(Journey Constraints) --- id2()
+    id1(Journey Constraints)
 ```
 
 ## On-demand factory management
@@ -29,5 +29,5 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    id1(Journey Constraints) --- id2()
+    id1(Journey Constraints)
 ```
