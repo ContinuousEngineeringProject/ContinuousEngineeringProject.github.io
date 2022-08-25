@@ -4,6 +4,11 @@
 - [Build the factory](#build-the-factory)
 - [Maintain the factory](#maintain-the-factory)
 - [On-Demand factory](#on-demand-factory)
+- Quickstart projects
+- Pipeline library
+- Factory bot
+- Documentation production
+- Governance
 <!-- /TOC -->
 
 ## Build the factory
@@ -14,6 +19,7 @@ flowchart LR
     id1(Create factory infrastructure) --> id2(Deploy factory core)
     id2 --> id3(Configure factory components)
 ```
+The journey backlog can be found [here]().
 
 ## Maintain the factory
 <!-- TODO: Goal Desc - Maintain the factory -->
@@ -22,11 +28,13 @@ flowchart LR
 flowchart LR
 
 ```
+The journey backlog can be found [here]().
 
-## On-demand factory management
+## On-demand factory
 <!-- TODO: Goal Desc - On-demand factory management -->
 
 ```mermaid
 flowchart LR
     
 ```
+The journey backlog can be found [here]().
