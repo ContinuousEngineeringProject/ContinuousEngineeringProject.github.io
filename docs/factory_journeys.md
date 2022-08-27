@@ -16,8 +16,9 @@
 
 ```mermaid
 flowchart LR
-    id1(Create factory infrastructure) --> id2(Deploy factory core)
-    id2 --> id3(Configure factory components)
+    id1(Define configuration) --> id2(Create infrastructure)
+    id2 --> id3(Deploy core)
+    id3 --> id4(Configure components)
 ```
 The journey backlog can be found [here]().
 
