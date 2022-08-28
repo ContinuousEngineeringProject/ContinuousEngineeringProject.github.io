@@ -12,7 +12,7 @@ flowchart LR
 
 <!-- TOC -->
 - [Issue pipeline](#issue-pipeline)
-- [Engineering pipeline](#engineering-pipeline)
+- [Build pipeline](#build-pipeline)
 <!-- /TOC -->
 
 ## Issue pipeline
@@ -31,11 +31,12 @@ flowchart LR
   id1 --- id2 --- id3 --- id4 --- id5 --- id6 --- id7
 ```
 
-## Engineering pipeline
-<!-- TODO: Description of engineering pipeline -->
+## Build pipeline
+<!-- TODO: Description of build pipeline -->
 
 ```mermaid
 flowchart LR
+  id0(Pull issue)
   id1(Create branch)
   id2(Journey & behavour test changes)
   id3(Code & unit test changes)
@@ -43,12 +44,13 @@ flowchart LR
   id5(PR pipleline)
   id6(PR merged)
   
-  id1 --> id2 --> id3 --> id4 --> id5 --> id6
+  id0 --> id1 --> id2 --> id3 --> id4 --> id5 --> id6
 ```
 
-### State diagram
+#### State diagram
 ```mermaid
 stateDiagram-v2
+  s0 : Pull issue
   s1 : Create issue branch
   s2 : Journey & behaviour test changes
   s3 : Trigger issue pipeline
@@ -60,7 +62,8 @@ stateDiagram-v2
   s8 : Merge PR
   s10 : Remove issue branch
   
-  [*] --> s1
+  [*] --> s0
+  s0 --> s1
   s1 --> s2
   s2 --> s3
   s3 --> s4 : Failed
