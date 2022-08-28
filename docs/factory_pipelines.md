@@ -35,12 +35,12 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  id1(Pull issue)
+  id1(Create branch)
   id2(Create journey & behavour tests)
   id3(TDD)
   id4(Commit to branch)
   id5(Branch pipeline)
-  id6(PR)
-  id7(Merged)
+  id6(PR submited)
+  id7(PR merged)
   id1 --- id2 --- id3 --- id4 --- id5 --- id6 --- id7
 ```
