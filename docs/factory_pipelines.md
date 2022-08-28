@@ -36,11 +36,36 @@ flowchart LR
 ```mermaid
 flowchart LR
   id1(Create branch)
-  id2(Create journey & behavour tests)
-  id3(TDD)
+  id2(Journey & behavour test changes)
+  id3(Code & unit test changes)
   id4(Commit to branch)
   id5(Branch pipeline)
   id6(PR submited)
   id7(PR merged)
+  
   id1 --- id2 --- id3 --- id4 --- id5 --- id6 --- id7
+```
+
+```mermaid
+stateDiagram-v2
+  s1 : Issue branch created
+  s2 : Journey & behaviour test changes
+  s3 : Issue branch pipeline
+  s4 : Unit test & code changes
+  s5 : Create or update PR
+  s6 : Submit PR
+  s7 : PR pipleine
+  s8 : Merge PR
+  
+  [*] --> s1
+  s1 --> s2
+  s2 --> s3
+  s3 --> s4 : Failed
+  s4 --> s3
+  s3 --> s5 : Passed
+  s5 --> s6
+  s6 --> s7
+  s7 --> s5 : Failed
+  s7 --> s8 : Passed
+  s8 --> [*]
 ```
