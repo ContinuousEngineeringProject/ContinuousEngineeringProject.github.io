@@ -1,4 +1,5 @@
 # Factory Pipeline Patterns
+<!-- TODO: Description of continuous engineering pipeline -->
 
 ```mermaid
 flowchart LR
@@ -15,7 +16,7 @@ flowchart LR
 <!-- /TOC -->
 
 ## Issue pipeline
-<!-- TODO: Desc - Issue pipeline -->
+<!-- TODO: Description of issue pipeline -->
 
 ```mermaid
 flowchart LR
@@ -26,45 +27,50 @@ flowchart LR
   id5(PR)
   id6(Merged)
   id7(Promoted)
+  
   id1 --- id2 --- id3 --- id4 --- id5 --- id6 --- id7
 ```
 
 ## Engineering pipeline
-<!-- TODO: Desc - Engineering pipeline -->
+<!-- TODO: Description of engineering pipeline -->
 
 ```mermaid
 flowchart LR
   id1(Create branch)
   id2(Journey & behavour test changes)
   id3(Code & unit test changes)
-  id4(Commit to branch)
-  id5(Branch pipeline)
-  id6(PR submited)
-  id7(PR merged)
+  id4(Branch pipeline)
+  id5(PR pipleline)
+  id6(PR merged)
   
-  id1 --- id2 --- id3 --- id4 --- id5 --- id6 --- id7
+  id1 --> id2 --> id3 --> id4 --> id5 --> id6
 ```
 
+### State diagram
 ```mermaid
 stateDiagram-v2
-  s1 : Issue branch created
+  s1 : Create issue branch
   s2 : Journey & behaviour test changes
-  s3 : Issue branch pipeline
+  s3 : Trigger issue pipeline
   s4 : Unit test & code changes
+  s9 : Commit to issue branch
   s5 : Create or update PR
   s6 : Submit PR
-  s7 : PR pipleine
+  s7 : Trigger PR pipleine
   s8 : Merge PR
+  s10 : Remove issue branch
   
   [*] --> s1
   s1 --> s2
   s2 --> s3
   s3 --> s4 : Failed
-  s4 --> s3
+  s4 --> s9
+  s9 --> s3
   s3 --> s5 : Passed
   s5 --> s6
   s6 --> s7
   s7 --> s5 : Failed
   s7 --> s8 : Passed
-  s8 --> [*]
+  s8 --> s10
+  s10 --> [*]
 ```
