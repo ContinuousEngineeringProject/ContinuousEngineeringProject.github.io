@@ -7,7 +7,6 @@ flowchart LR
   id3(PROMOTE)
   id4(MEASURE)
   id1 --> id2 --> id3 --> id4 --> id1
-  id1 & id2 & id3 -.-> id4
 ```
 
 <!-- TOC -->
