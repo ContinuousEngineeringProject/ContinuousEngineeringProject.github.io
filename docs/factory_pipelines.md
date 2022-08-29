@@ -11,13 +11,13 @@ flowchart LR
 ```
 
 <!-- TOC -->
-- [Issue state pipeline](#issue-state-pipeline)
+- [Issue states](#issue-states)
 - [Build pipeline](#build-pipeline)
 - [Issue branch pipeline](#issue-branch-pipeline)
 <!-- /TOC -->
 
-## Issue state pipeline
-<!-- TODO: Description of issue pipeline -->
+## Issue states
+<!-- TODO: Description of issue states -->
 
 ```mermaid
 flowchart LR
@@ -78,9 +78,9 @@ stateDiagram-v2
   s7 --> s5 : Failed
   s7 --> s8 : Passed
   s8 --> s5 : Failed
-  s8 --> s10 : Completed
-  s10 --> s12
-  s12 --> [*]
+  s8 --> s12 : Completed
+  s12 --> s10
+  s10 --> [*]
 ```
 
 ### Issue branch pipeline
@@ -91,11 +91,11 @@ flowchart LR
   id1(Unit tests)
   id2(Static code analysis)
   id3(Build)
-  id4(Deploy)
-  id5(Behaviour verification)
+  id4(Behaviour verification)
   
-  id1 --> id2 --> id3 --> id4 --> id5
+  id1 --> id2 --> id3 --> id4
 ```
+
 #### State diagram
 ```mermaid
 stateDiagram-v2
@@ -104,9 +104,8 @@ stateDiagram-v2
   s2 : Linting
   s3 : SAST
   s4 : Build binaries
-  s5 : Deploy binaries
-  s6 : Issue behaviour tests
-  s7 : Journey step regrestion tests
+  s5 : Issue behaviour tests
+  s6 : Journey step regrestion tests
   
   state f1 <<fork>>
   state j1 <<join>>
@@ -121,11 +120,10 @@ stateDiagram-v2
   s2 --> j1
   s3 --> j1
   j1 --> s4
-  s4 --> s5
-  s5 --> f2
+  s4 --> f2
+  f2 --> s5
   f2 --> s6
-  f2 --> s7
+  s5 --> j2
   s6 --> j2
-  s7 --> j2
   j2 --> [*]
 ```
