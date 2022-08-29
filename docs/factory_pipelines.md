@@ -14,6 +14,7 @@ flowchart LR
 - [Issue states](#issue-states)
 - [Build pipeline](#build-pipeline)
 - [Issue branch pipeline](#issue-branch-pipeline)
+- [PR pipeline](#pr-pipeline)
 <!-- /TOC -->
 
 ## Issue states
@@ -91,7 +92,7 @@ flowchart LR
   id1(Unit tests)
   id2(Static code analysis)
   id3(Build)
-  id4(Behaviour verification)
+  id4(Issue behaviour verification)
   
   id1 --> id2 --> id3 --> id4
 ```
@@ -104,13 +105,10 @@ stateDiagram-v2
   s2 : Linting
   s3 : SAST
   s4 : Build binaries
-  s5 : Issue behaviour tests
-  s6 : Journey step regrestion tests
+  s5 : Issue behaviour test suite
   
   state f1 <<fork>>
   state j1 <<join>>
-  state f2 <<fork>>
-  state j2 <<join>>
   
   [*] --> s0
   s0 --> s1
@@ -120,10 +118,47 @@ stateDiagram-v2
   s2 --> j1
   s3 --> j1
   j1 --> s4
-  s4 --> f2
-  f2 --> s5
-  f2 --> s6
-  s5 --> j2
-  s6 --> j2
-  j2 --> [*]
+  s4 --> s5
+  s5 --> [*]
+```
+
+### PR pipeline
+<!-- TODO: Description of PR pipeline -->
+
+```mermaid
+flowchart LR
+  id1(Unit tests)
+  id2(Static code analysis)
+  id3(Build)
+  id4(Behaviour verification)
+  id5(Journey verification)
+  
+  id1 --> id2 --> id3 --> id4
+```
+
+#### State diagram
+```mermaid
+stateDiagram-v2
+  s0 : Unit tests
+  s1 : Code coverage
+  s2 : Linting
+  s3 : SAST
+  s4 : Build binaries
+  s5 : Behaviour test suite
+  s6 : Journey test suite
+  
+  state f1 <<fork>>
+  state j1 <<join>>
+  
+  [*] --> s0
+  s0 --> s1
+  s1 --> f1
+  f1 --> s2
+  f1 --> s3
+  s2 --> j1
+  s3 --> j1
+  j1 --> s4
+  s4 --> s5
+  s5 --> s6
+  s6 --> [*]
 ```
