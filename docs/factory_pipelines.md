@@ -37,15 +37,14 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  id0(Pull issue)
-  id1(Create branch)
+  id1(Pull issue)
   id2(Journey & behavour test changes)
   id3(Code & unit test changes)
-  id4(Branch pipeline)
+  id4(Issue branch pipeline)
   id5(PR pipleline)
   id6(PR merged)
   
-  id0 --> id1 --> id2 --> id3 --> id4 --> id5 --> id6
+  id1 --> id2 --> id3 --> id4 --> id5 --> id6
 ```
 
 #### State diagram
@@ -54,7 +53,7 @@ stateDiagram-v2
   s0 : Set issue state to Build
   s1 : Create issue branch
   s2 : Journey & behaviour test changes
-  s3 : Trigger issue pipeline
+  s3 : Trigger issue branch pipeline
   s4 : Unit test & code changes
   s9 : Commit to issue branch
   s11 : Set issue state to PR
@@ -89,10 +88,44 @@ stateDiagram-v2
 
 ```mermaid
 flowchart LR
-  id0(Commit to branch)
-  id1(Run unit tests)
-  id2(Verify issue unit test coverage)
-  id3(Run issue behaviour tests)
+  id1(Unit tests)
+  id2(Static code analysis)
+  id3(Build)
+  id4(Deploy)
+  id5(Behaviour verification)
   
-  id0 --> id1 --> id2 --> id3
+  id1 --> id2 --> id3 --> id4 --> id5
+```
+#### State diagram
+```mermaid
+stateDiagram-v2
+  s0 : Unit tests
+  s1 : Code coverage
+  s2 : Linting
+  s3 : SAST
+  s4 : Build binaries
+  s5 : Deploy binaries
+  s6 : Issue behaviour tests
+  s7 : Journey step regrestion tests
+  
+  state f1 <<fork>>
+  state j1 <<join>>
+  state f2 <<fork>>
+  state j2 <<join>>
+  
+  [*] --> s0
+  s0 --> s1
+  s1 --> f1
+  f1 --> s2
+  f1 --> s3
+  s2 --> j1
+  s3 --> j1
+  j1 --> s4
+  s4 --> s5
+  s5 --> f2
+  f2 --> s6
+  f2 --> s7
+  s6 --> j2
+  s7 --> j2
+  j2 --> [*]
 ```
