@@ -146,7 +146,7 @@ flowchart LR
   id6(Preview environment)
   id7([Review])
   
-  id1 --> id2 --> id3 --> id4 --> id5 -->id6
+  id1 --> id2 --> id3 --> id4 --> id5 -->id6 --> id7
 ```
 
 #### State diagram
