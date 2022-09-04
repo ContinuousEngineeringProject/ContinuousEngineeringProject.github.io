@@ -94,7 +94,9 @@ flowchart LR
   id2(Static code analysis)
   id3(Build binaries)
   id4(Issue verification)
-  id1 --> id2 --> id3 --> id4
+  id5(Generate issue PR)
+  
+  id1 --> id2 --> id3 --> id4 --> id5
 ```
 
 #### State diagram
@@ -106,6 +108,8 @@ stateDiagram-v2
   s4 : Build binaries
   s5 : Issue behaviour verification
   s6 : Step behaviour verification
+  s7 : Create issue PR
+  s8 : Submit issue PR
   
   state f1 <<fork>>
   state j1 <<join>>
@@ -124,7 +128,9 @@ stateDiagram-v2
   f2 --> s6
   s5 --> j2
   s6 --> j2
-  j2 --> [*]
+  j2 --> s7
+  s7 --> s8
+  s8 --> [*]
 ```
 
 ### PR pipeline
@@ -138,6 +144,7 @@ flowchart LR
   id4(Issue verification)
   id5(Journey verification)
   id6(Preview environment)
+  id7([Review])
   
   id1 --> id2 --> id3 --> id4 --> id5 -->id6
 ```
@@ -155,6 +162,7 @@ stateDiagram-v2
   s7 : Issue journey verification
   s8 : Journey verification
   s9 : Preview environment created
+  s10 : Review
   
   state f1 <<fork>>
   state j1 <<join>>
@@ -183,7 +191,8 @@ stateDiagram-v2
   s7 --> j3
   s8 --> j3
   j3 --> s9
-  s9 --> [*]
+  s9 --> s10
+  s10 --> [*]
 ```
 
 ### Publish pipeline
