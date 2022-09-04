@@ -44,8 +44,7 @@ flowchart LR
   id3(Code & unit test changes)
   id4(Issue branch pipeline)
   id5(PR pipleline)
-  id6(PR merged)
-  id7(Publish pipeline)
+  id6(Publish pipeline)
   
   id1 --> id2 --> id3 --> id4 --> id5 --> id6
 ```
@@ -94,8 +93,7 @@ flowchart LR
   id1(Unit tests)
   id2(Static code analysis)
   id3(Build binaries)
-  id4(Issue behaviour verification)
-  
+  id4(Issue verification)
   id1 --> id2 --> id3 --> id4
 ```
 
@@ -106,10 +104,13 @@ stateDiagram-v2
   s2 : Linting
   s3 : Code coverage
   s4 : Build binaries
-  s5 : Issue behaviour test suite
+  s5 : Issue behaviour verification
+  s6 : Step behaviour verification
   
   state f1 <<fork>>
   state j1 <<join>>
+  state f2 <<fork>>
+  state j2 <<join>>
   
   [*] --> s1
   s1 --> f1
@@ -118,8 +119,12 @@ stateDiagram-v2
   s2 --> j1
   s3 --> j1
   j1 --> s4
-  s4 --> s5
-  s5 --> [*]
+  s4 --> f2
+  f2 --> s5
+  f2 --> s6
+  s5 --> j2
+  s6 --> j2
+  j2 --> [*]
 ```
 
 ### PR pipeline
@@ -130,10 +135,11 @@ flowchart LR
   id1(Unit tests)
   id2(Static code analysis)
   id3(Build binaries)
-  id4(Issue behaviour verification)
-  id4(Journey verification)
+  id4(Issue verification)
+  id5(Journey verification)
+  id6(Preview environment)
   
-  id1 --> id2 --> id3 --> id4
+  id1 --> id2 --> id3 --> id4 --> id5 -->id6
 ```
 
 #### State diagram
@@ -144,10 +150,11 @@ stateDiagram-v2
   s2 : Code coverage
   s3 : SAST
   s4 : Build binaries
-  s5 : Issue behaviour test suite
-  s6 : Journey step behaviour test suite
-  s7 : Issue journey test suite
-  s8 : Journey test suite
+  s5 : Issue behaviour verification
+  s6 : Step behaviour verification
+  s7 : Issue journey verification
+  s8 : Journey verification
+  s9 : Preview environment created
   
   state f1 <<fork>>
   state j1 <<join>>
@@ -175,8 +182,34 @@ stateDiagram-v2
   f3 --> s8
   s7 --> j3
   s8 --> j3
-  j3 --> [*]
+  j3 --> s9
+  s9 --> [*]
 ```
 
 ### Publish pipeline
-<!-- TODO: Description of issue branch pipeline -->
+<!-- TODO: Description of publish pipeline -->
+
+```mermaid
+flowchart LR
+  id1(Update Changelog)
+  id2(Build binaries)
+  id3(Publish)
+  id4(Staging environment)
+  id1 --> id2 --> id3 --> id4
+```
+
+#### State diagram - TODO
+```mermaid
+stateDiagram-v2
+  s1 : Update Changelog
+  s2 : Build binaries
+  s3 : Publish
+  s4 : Update staging environment
+  
+  [*] --> s1
+  s1 --> s2
+  s2 --> s3
+  s3 --> s4
+  s4 --> [*]
+```
+
