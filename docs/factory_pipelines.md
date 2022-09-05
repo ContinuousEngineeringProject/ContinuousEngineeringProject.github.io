@@ -208,17 +208,21 @@ flowchart LR
 ```
 
 #### State diagram - TODO
+
+
+### Pipeline triggers
+<!-- TODO: Description of pipeline triggers -->
+
 ```mermaid
-stateDiagram-v2
-  s1 : Update Changelog
-  s2 : Build binaries
-  s3 : Publish
-  s4 : Update staging environment
+flowchart LR
+  id1(Commit)
+  id2(Issue pipeline)
+  id3(Fork PR)
+  id4(PR pipeline)
+  id5(Publish pipeline)
   
-  [*] --> s1
-  s1 --> s2
-  s2 --> s3
-  s3 --> s4
-  s4 --> [*]
+  id1 --> id2
+  id2 & id3  --> id4 --> id5
 ```
 
+#### State diagram - TODO
