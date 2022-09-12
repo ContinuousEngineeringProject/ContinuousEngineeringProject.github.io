@@ -1,19 +1,26 @@
 # The Factory Journeys
 
 <!-- TOC -->
-- [Build the factory](#build-the-factory)
-- [Maintain the factory](#maintain-the-factory)
-- Factory cli
-- Quickstart projects
-- Pipeline library
-- Factory bot
-- Documentation production
-- Governance
-- On-demand
+- [Factory toolkit](#factory-toolkit)
+    - [Build the factory](#build-the-factory)
+    - [Maintain the factory](#maintain-the-factory)
+    - Quickstart projects
+    - Pipeline library
+    - On-demand
+- [Engineer experience](#engineer-experience)
+    - [Factory cli](#factory-cli)
+    - Factory bot
+    - Governance
+    - Documentation production
 <!-- /TOC -->
 
-## Build the factory
-<!-- TODO: Journey Desc - Build the Factory -->
+## Factory toolkit
+<!-- TODO: doc(journey): describe the factory toolkit outcome -->
+
+The outcome backlog can be found [here]().
+
+### Build the factory
+<!-- TODO: doc(journey): describe build the Factory -->
 
 ```mermaid
 flowchart LR
@@ -26,8 +33,8 @@ flowchart LR
 ```
 The journey backlog can be found [here]().
 
-## Maintain the factory
-<!-- TODO: Journey Desc - Maintain the factory -->
+### Maintain the factory
+<!-- TODO: doc(journey): describe maintain the factory -->
 
 ```mermaid
 flowchart LR
@@ -41,3 +48,17 @@ flowchart LR
 ```
 The journey backlog can be found [here]().
 
+
+## Engineer experience
+<!-- TODO: doc(journey): describe the engineer experience outcome -->
+
+The outcome backlog can be found [here]().
+
+### Factory cli
+<!-- TODO: doc(journey): describe Factory cli -->
+
+```mermaid
+flowchart LR
+    
+```
+The journey backlog can be found [here]().
