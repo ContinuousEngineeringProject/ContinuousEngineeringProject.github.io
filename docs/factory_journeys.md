@@ -12,11 +12,11 @@
     - Engineering workflow automation
     - Governance automation
     - Documentation automation
--[Engineering accelerators](#engineering-accelerators)
+- [Engineering accelerators](#engineering-accelerators)
     - Project quickstart
     - OSS quickstart
     - Pipeline library
--[ML factory](#ml-factory)
+- [ML factory](#ml-factory)
     - ML Scrum master
     - ML Product owner
     - ML DevOps
