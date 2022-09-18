@@ -3,15 +3,23 @@
 <!-- TOC -->
 - [Factory toolkit](#factory-toolkit)
     - [Build the factory](#build-the-factory)
-    - [Maintain the factory](#maintain-the-factory)
-    - Quickstart projects
-    - Pipeline library
-    - On-demand
+    - [Run the factory](#run-the-factory)
+    - On-demand factory
 - [Engineer experience](#engineer-experience)
     - [Factory cli](#factory-cli)
     - Factory bot
-    - Governance
-    - Documentation production
+    - Factory dashboard
+    - Engineering workflow automation
+    - Governance automation
+    - Documentation automation
+-[Engineering accelerators](#engineering-accelerators)
+    - Project quickstart
+    - OSS quickstart
+    - Pipeline library
+-[ML factory](#ml-factory)
+    - ML Scrum master
+    - ML Product owner
+    - ML DevOps
 <!-- /TOC -->
 
 ## Factory toolkit
@@ -33,8 +41,8 @@ flowchart LR
 ```
 The journey backlog can be found [here]().
 
-### Maintain the factory
-<!-- TODO: doc(journey): describe maintain the factory -->
+### Run the factory
+<!-- TODO: doc(journey): describe run the factory -->
 
 ```mermaid
 flowchart LR
@@ -62,3 +70,15 @@ flowchart LR
     
 ```
 The journey backlog can be found [here]().
+
+
+## Engineering accelerators
+<!-- TODO: doc(journey): describe the engineering accelerators outcome -->
+
+The outcome backlog can be found [here]()
+
+## ML factory
+<!-- TODO: doc(journey): describe the ML factory outcome -->
+
+The outcome backlog can be found [here]()
+
