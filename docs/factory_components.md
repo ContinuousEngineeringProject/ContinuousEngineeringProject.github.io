@@ -42,9 +42,9 @@ flowchart LR
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Jenkins X | GitHub Repository | GitHub Packages | Slack | Sonar Cloud | GitHub Issues | GCP | Lens |
 | GitHub Actions |  |  |  | Hound | GitHub Projects |  | Octant |
-|  |  |  |  | Semantic Pull Requests |  |  |  |
-|  |  |  |  | DCO |  |  |  |
-|  |  |  |  | dependabot |  |  |  |
+|  |  |  |  | Semantic Pull Requests |  |  | Lighthouse Dashboard |
+|  |  |  |  | DCO |  |  | Grafana |
+|  |  |  |  | dependabot |  |  | Prometheus |
 |  |  |  |  | guide-bot |  |  |  |
 |  |  |  |  | sonatype-lift |  |  |  |
 |  |  |  |  |  |  |  |  |
