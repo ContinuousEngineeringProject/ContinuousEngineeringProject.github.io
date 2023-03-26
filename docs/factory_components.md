@@ -4,7 +4,7 @@
 <!-- TODO: highlevel component architecture 
 ```mermaid
 flowchart LR
-  id1(ENGINE)
+  id1(PIPELINE ENGINE)
   id2(SOURCE REPOSITORY)
   id3(BINARY REPOSITORY)
   id4(IM)
@@ -17,7 +17,7 @@ flowchart LR
 
 <!-- TOC -->
 - [Tooling Roadmap](#tooling-roadmap)
-- [Engine](#engine)
+- [Pipeline Engine](#pipeline-engine)
 - [Source Repository](#source-repository)
 - [Binary Repository](#binary-repository)
 - [IM](#im)
@@ -32,29 +32,35 @@ flowchart LR
 
 ### Integrated 
 
-| Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| Pipeline Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |
 
 ### Comming Soon
 
-| Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| Pipeline Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Jenkins X | GitHub Repository | GitHub Packages | Slack | Sonar Cloud | GitHub Issues | GCP |  |
-| GitHub Actions |  |  |  |  | GitHub Projects |  |  |
+| Jenkins X | GitHub Repository | GitHub Packages | Slack | Sonar Cloud | GitHub Issues | GCP | Lens |
+| GitHub Actions |  |  |  | Hound | GitHub Projects |  | Octant |
+|  |  |  |  | Semantic Pull Requests |  |  |  |
+|  |  |  |  | DCO |  |  |  |
+|  |  |  |  | dependabot |  |  |  |
+|  |  |  |  | guide-bot |  |  |  |
+|  |  |  |  | sonatype-lift |  |  |  |
 |  |  |  |  |  |  |  |  |
+
 
 ### Backlog
 
-| Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| Pipeline Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Terraform Cloud |  |  |  |  |  | Azure |  |
 |  |  |  |  |  |  | AWS |  |
 |  |  |  |  |  |  |  |  |
 
 
-## Engine
-<!-- TODO: Description of Engine component -->
+## Pipeline Engine
+<!-- TODO: Description of Pipeline Engine component -->
 
 ## Source Repository
 <!-- TODO: Description of Source Repository component -->
