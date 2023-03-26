@@ -8,11 +8,9 @@ flowchart LR
   id3(BINARY REPOSITORY)
   id4[[IM]]
   id5(CODE QUALITY)
-  id6[[ALM]]
+  id6[[BACKLOG MANAGEMENT]]
   id7(INFRASTRUCTURE)
-  id8(MONITORING)
-  
-  click id1 "https://github.com/ContinuousEngineeringProject/ContinuousEngineeringProject.github.io/tree/main/docs/factory_components.md#pipeline-engine"
+  id8[[MONITORING]]
   
   id6 --- id2 & id4
   id2 --- id1 & id4
@@ -25,71 +23,105 @@ flowchart LR
   
 ```
 
-<!-- TOC -->
-- [Tooling Roadmap](#tooling-roadmap)
-- [Pipeline Engine](#pipeline-engine)
-- [Source Repository](#source-repository)
-- [Binary Repository](#binary-repository)
-- [IM](#im)
-- [Code Quality](#code-quality)
-- [ALM](#alm)
-- [Infrastructure](#infrastructure)
-- [Monitoring](#monitoring)
-<!-- /TOC -->
 
 ## Tooling Roadmap
 <!-- TODO: Description of the tooling roadmap -->
 
-### Integrated 
+### Ready 
 
-| Pipeline Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| [Pipeline Engine](#pipeline-engine) | [Source Repository](#source-repository) | [Binary Repository](#binary-repository) | [IM](#im) | [Code Quality](#code-quality) | [Backlog Management](#backlog-management) | [Infrastructure](#infrastructure) | [Monitoring](#monitoring) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |
 
 ### Comming Soon
 
-| Pipeline Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| [Pipeline Engine](#pipeline-engine) | [Source Repository](#source-repository) | [Binary Repository](#binary-repository) | [IM](#im) | [Code Quality](#code-quality) | [Backlog Management](#backlog-management) | [Infrastructure](#infrastructure) | [Monitoring](#monitoring) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Jenkins X | GitHub Repository | GitHub Packages | Slack | Sonar Cloud | GitHub Issues | GCP | Lens |
-| GitHub Actions |  |  |  | Hound | GitHub Projects |  | Octant |
-|  |  |  |  | Semantic Pull Requests |  |  | Lighthouse Dashboard |
-|  |  |  |  | DCO |  |  | Grafana |
-|  |  |  |  | dependabot |  |  | Prometheus |
-|  |  |  |  | guide-bot |  |  |  |
-|  |  |  |  | sonatype-lift |  |  |  |
+| Jenkins X | GitHub Repository | GitHub Packages | Slack | Sonar Cloud | GitHub Issues | GCP | Grafana |
+| GitHub Actions |  |  |  | Hound | GitHub Projects |  | jx Dashboard |
+|  |  |  |  | Semantic Pull Requests |  |  | Lighthouse UI |
+|  |  |  |  | DCO |  |  |  |
+|  |  |  |  | dependabot |  |  |  |
+|  |  |  |  | guide bot |  |  |  |
+|  |  |  |  | sonatype lift |  |  |  |
 |  |  |  |  |  |  |  |  |
 
 
-### Backlog
+### Under Review
 
-| Pipeline Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| [Pipeline Engine](#pipeline-engine) | [Source Repository](#source-repository) | [Binary Repository](#binary-repository) | [IM](#im) | [Code Quality](#code-quality) | [Backlog Management](#backlog-management) | [Infrastructure](#infrastructure) | [Monitoring](#monitoring) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Terraform Cloud |  |  |  |  |  | Azure |  |
-|  |  |  |  |  |  | AWS |  |
+| Terraform Cloud |  |  |  |  |  | Azure | Octant |
+|  |  |  |  |  |  | AWS | Lens |
 |  |  |  |  |  |  |  |  |
 
+---
 
 ## Pipeline Engine
-<!-- TODO: Description of Pipeline Engine component -->
+<!-- TODO: add description of Pipeline Engine component -->
+
+### Jenkins X
+<!-- TODO: add GitHub Repository configuraion -->
+- jx-pipelines-visualizer
+- continuous delivery indicators
+- jx-slack
+- lighthouse-webui-plugin
+- jx-observability
+
+### GitHub Actions
+<!-- TODO: add GitHub Repository configuraion -->
+- dependabot
+- dco
+- semantic
+- sonarsource/sonarcloud-github-action
+- actions/stale@v3
+
+---
 
 ## Source Repository
-<!-- TODO: Description of Source Repository component -->
+<!-- TODO: add description of Source Repository component -->
+
+### GitHub Repository
+<!-- TODO: add GitHub Repository configuraion -->
+
+---
 
 ## Binary Repository
-<!-- TODO: Description of Binary Repository component -->
+<!-- TODO: add description of Binary Repository component -->
+
+---
 
 ## IM
-<!-- TODO: Description of IM component -->
+<!-- TODO: add description of IM component -->
+
+---
 
 ## Code Quality
-<!-- TODO: Description of Code Quality component -->
+<!-- TODO: add description of Code Quality component -->
 
-## ALM
-<!-- TODO: Description of ALM component -->
+---
+
+## Backlog Management
+<!-- TODO: add description of Backlog Management component -->
+
+---
 
 ## Infrastructure
-<!-- TODO: Description of Infrastructure component -->
+<!-- TODO: add description of Infrastructure component -->
+
+---
 
 ## Monitoring
-<!-- TODO: Description of Monitoring component -->
+<!-- TODO: add description of Monitoring component -->
+
+### Grafana
+<!-- TODO: add Grafana configuraion -->
+- continuous delivery indicators
+- Promtail
+- Loki
+- Tempo
+- Prometheus
+
+---
+
 
