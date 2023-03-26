@@ -1,7 +1,6 @@
 # Factory Components
 <!-- TODO: Description of factory components -->
 
-<!-- TODO: highlevel component architecture 
 ```mermaid
 flowchart LR
   id1(PIPELINE ENGINE)
@@ -12,8 +11,17 @@ flowchart LR
   id6(ALM)
   id7(INFRASTRUCTURE)
   id8(MONITORING)
+  
+  id6 --- id2 & id4
+  id2 --- id1 & id4
+  id3 --- id1
+  id1 --- id4 & id5 & id7
+  
+  id4 -.- id8
+  id1 -.- id8
+  id7 -.- id8
+  
 ```
--->
 
 <!-- TOC -->
 - [Tooling Roadmap](#tooling-roadmap)
