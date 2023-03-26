@@ -66,7 +66,7 @@ flowchart LR
 #### Jenkins X
 <!-- TODO: add GitHub Repository configuraion -->
 - jx-pipelines-visualizer
-- continuous delivery indicators
+- jxgh/cd-indicators
 - jx-slack
 - lighthouse-webui-plugin
 - jx-observability
@@ -119,7 +119,6 @@ flowchart LR
 
 #### Grafana
 <!-- TODO: add Grafana configuraion -->
-- continuous delivery indicators
 - Promtail
 - Loki
 - Tempo
