@@ -1,7 +1,7 @@
 # Factory Components
 <!-- TODO: Description of factory components -->
 
-<!-- TODO: highlevel component architecture -->
+<!-- TODO: highlevel component architecture 
 ```mermaid
 flowchart LR
   id1(ENGINE)
@@ -13,8 +13,10 @@ flowchart LR
   id7(INFRASTRUCTURE)
   id8(MONITORING)
 ```
+-->
 
 <!-- TOC -->
+- [Tooling Roadmap](#tooling-roadmap)
 - [Engine](#engine)
 - [Source Repository](#source-repository)
 - [Binary Repository](#binary-repository)
@@ -24,6 +26,32 @@ flowchart LR
 - [Infrastructure](#infrastructure)
 - [Monitoring](#monitoring)
 <!-- /TOC -->
+
+## Tooling Roadmap
+<!-- TODO: Description of the tooling roadmap -->
+
+### Integrated 
+
+| Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+
+### Comming Soon
+
+| Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Jenkins X | GitHub Repository | GitHub Packages | Slack | Sonar Cloud | GitHub Issues | GCP |  |
+| GitHub Actions |  |  |  |  | GitHub Projects |  |  |
+|  |  |  |  |  |  |  |  |
+
+### Backlog
+
+| Engine | Source Repository | Binary Repository | IM | Code Quality | ALM | Infrastructure | Monitoring |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Terraform Cloud |  |  |  |  |  | Azure |  |
+|  |  |  |  |  |  | AWS |  |
+|  |  |  |  |  |  |  |  |
+
 
 ## Engine
 <!-- TODO: Description of Engine component -->
