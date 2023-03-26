@@ -6,11 +6,13 @@ flowchart LR
   id1(PIPELINE ENGINE)
   id2(SOURCE REPOSITORY)
   id3(BINARY REPOSITORY)
-  id4(IM)
+  id4[[IM]]
   id5(CODE QUALITY)
-  id6(ALM)
+  id6[[ALM]]
   id7(INFRASTRUCTURE)
   id8(MONITORING)
+  
+  click id1 "https://github.com/ContinuousEngineeringProject/ContinuousEngineeringProject.github.io/tree/main/docs/factory_components.md#pipeline-engine"
   
   id6 --- id2 & id4
   id2 --- id1 & id4
