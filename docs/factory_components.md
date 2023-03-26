@@ -57,10 +57,13 @@ flowchart LR
 
 ---
 
-## Pipeline Engine
+
+## Components Overivew
+
+### Pipeline Engine
 <!-- TODO: add description of Pipeline Engine component -->
 
-### Jenkins X
+#### Jenkins X
 <!-- TODO: add GitHub Repository configuraion -->
 - jx-pipelines-visualizer
 - continuous delivery indicators
@@ -68,7 +71,7 @@ flowchart LR
 - lighthouse-webui-plugin
 - jx-observability
 
-### GitHub Actions
+#### GitHub Actions
 <!-- TODO: add GitHub Repository configuraion -->
 - dependabot
 - dco
@@ -78,43 +81,43 @@ flowchart LR
 
 ---
 
-## Source Repository
+### Source Repository
 <!-- TODO: add description of Source Repository component -->
 
-### GitHub Repository
+#### GitHub Repository
 <!-- TODO: add GitHub Repository configuraion -->
 
 ---
 
-## Binary Repository
+### Binary Repository
 <!-- TODO: add description of Binary Repository component -->
 
 ---
 
-## IM
+### IM
 <!-- TODO: add description of IM component -->
 
 ---
 
-## Code Quality
+### Code Quality
 <!-- TODO: add description of Code Quality component -->
 
 ---
 
-## Backlog Management
+### Backlog Management
 <!-- TODO: add description of Backlog Management component -->
 
 ---
 
-## Infrastructure
+### Infrastructure
 <!-- TODO: add description of Infrastructure component -->
 
 ---
 
-## Monitoring
+### Monitoring
 <!-- TODO: add description of Monitoring component -->
 
-### Grafana
+#### Grafana
 <!-- TODO: add Grafana configuraion -->
 - continuous delivery indicators
 - Promtail
@@ -123,5 +126,4 @@ flowchart LR
 - Prometheus
 
 ---
-
 
