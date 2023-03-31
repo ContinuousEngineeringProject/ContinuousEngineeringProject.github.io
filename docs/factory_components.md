@@ -73,9 +73,7 @@ flowchart LR
 |  |  |  |  | sonatype lift |  |  |  |
 |  |  |  |  |  |  |  |  |
 
-
 ### Under Review
-
 | [Pipeline Engine](#pipeline-engine) | [Source Repository](#source-repository) | [Binary Repository](#binary-repository) | [IM](#im) | [Code Quality](#code-quality) | [Backlog Management](#backlog-management) | [Infrastructure](#infrastructure) | [Monitoring](#monitoring) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Terraform Cloud |  |  |  |  |  | Azure | Octant |
@@ -153,20 +151,16 @@ flowchart LR
 ### Code Quality
 <!-- TODO: add description of Code Quality component -->
 
-#### Review
-<!-- TODO: add Review configuraion -->
-
-#### SCA
-<!-- TODO: add SCA configuraion -->
-
-#### Secutiry Testing
-<!-- TODO: add Secutiry Testing configuraion -->
-
-#### Unit Testing
-<!-- TODO: add Unit Testing configuraion -->
-
-#### Behaviour Testing
-<!-- TODO: add Behaviour Testing configuraion -->
+| Tool | Intergration | SCA | Unit Testing | Behaviour Testing | Secutiry Testing |
+| --- | --- | --- | --- | --- | --- |
+| Sonar Cloud | Actions | X |  |  |  |
+| Hound | Actions | X |  |  |  |
+| Semantic Pull Requests | Actions | X |  |  |  |
+| DCO | Actions | X |  |  |  |
+| dependabot | Actions |  |  |  | X |
+| guide bot | Actions | X |  |  |  |
+| sonatype lift | Actions | X |  |  |  |
+|  |  |  |  |  |  |
 
 ---
 
