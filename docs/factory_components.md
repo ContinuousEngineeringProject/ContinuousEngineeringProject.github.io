@@ -27,6 +27,33 @@ flowchart LR
 ## Tooling Roadmap
 <!-- TODO: Description of the tooling roadmap -->
 
+
+ <!--
+```mermaid
+flowchart LR
+  id0(GitHub Actions)
+  id1(Jenkins X)
+  id2(GitHub Repository)
+  id3(GitHub Packages)
+  id4(Slack)
+  id5(CODE QUALITY)
+  id6(GitHub Issues)
+  id7(INFRASTRUCTURE)
+  id8[[MONITORING]]
+  
+  id6 --- id2 & id4
+  id2 --- id1 & id4 & id0
+  id3 --- id1
+  id1 --- id4 & id5 & id7
+  id0 --- id5
+  
+  id4 -.- id8
+  id1 -.- id8
+  id7 -.- id8
+  
+```
+-->
+
 ### Ready 
 
 | [Pipeline Engine](#pipeline-engine) | [Source Repository](#source-repository) | [Binary Repository](#binary-repository) | [IM](#im) | [Code Quality](#code-quality) | [Backlog Management](#backlog-management) | [Infrastructure](#infrastructure) | [Monitoring](#monitoring) |
@@ -61,10 +88,34 @@ flowchart LR
 ## Components Overivew
 
 ### Pipeline Engine
-<!-- TODO: add description of Pipeline Engine component -->
+<!-- TODO: add description of Pipeline Engine component 
+
+
+```mermaid
+flowchart LR
+  id0(GitHub Actions)
+  id1(Jenkins X)
+  id2(GitHub Repository)
+  id3(BINARY REPOSITORY)
+  id4(IM)
+  id5(CODE QUALITY)
+  id7(INFRASTRUCTURE)
+  id8(MONITORING)
+  
+  id2 --- id1 & id4 & id0
+  id3 --- id1
+  id0 --- id5
+  id1 --- id4 & id5 & id7
+  
+  id4 --- id8
+  id1 --- id8
+  id7 --- id8
+  
+```
+-->
 
 #### Jenkins X
-<!-- TODO: add GitHub Repository configuraion -->
+<!-- TODO: add Jenkins X configuraion -->
 - jx-pipelines-visualizer
 - jxgh/cd-indicators
 - jx-slack
@@ -72,7 +123,7 @@ flowchart LR
 - jx-observability
 
 #### GitHub Actions
-<!-- TODO: add GitHub Repository configuraion -->
+<!-- TODO: add GitHub Actions configuraion -->
 - dependabot
 - dco
 - semantic
@@ -101,6 +152,21 @@ flowchart LR
 
 ### Code Quality
 <!-- TODO: add description of Code Quality component -->
+
+#### Review
+<!-- TODO: add Review configuraion -->
+
+#### SCA
+<!-- TODO: add SCA configuraion -->
+
+#### Secutiry Testing
+<!-- TODO: add Secutiry Testing configuraion -->
+
+#### Unit Testing
+<!-- TODO: add Unit Testing configuraion -->
+
+#### Behaviour Testing
+<!-- TODO: add Behaviour Testing configuraion -->
 
 ---
 
